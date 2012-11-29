@@ -1,0 +1,153 @@
+// *****************************************************************************
+// RESPONSIVE DESIGN
+// *****************************************************************************
+
+a#show-sidebar2-trigger {
+  @include transform(rotate(270deg));
+  @include linear-gradient(top, $gray, $grayDark);
+  border-radius: 10px 10px 0 0;
+  border-top: none;
+  box-shadow: 0 -1px 5px $shadowLight;
+  color: $white;
+  cursor: pointer;
+  display: none;
+  font-size: 11px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  margin-right: -33px;
+  opacity: .9;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 1px $shadow;
+  text-transform: uppercase;
+  top: 50%;
+  width: 100px;
+  word-spacing: 2px;
+  z-index: $zindexSlideOutToggle;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+
+// ------------------------------------------------------------------
+//  IPADS
+// ------------------------------------------------------------------
+
+// iPads (portrait and landscape)
+// ------------------------------------------------------------------
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+}
+
+// iPads (landscape)
+// ------------------------------------------------------------------
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+}
+
+// iPads (portrait)
+// ------------------------------------------------------------------
+
+$text-for-portrait: "Turn it Dude!";
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  body:after {
+    background-color: $shadowLight;
+    bottom: 0;
+    color: $white;
+    content: $text-for-portrait;
+    display: block;
+    font-family: $livingsocial-stack1;
+    font-size: 60px;
+    left: 0;
+    padding-top: 300px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    z-index: $zindexPortraitWarning;
+  }
+}
+
+@media screen and (max-width: 768px) { /* Faking it for testing */
+  body.development:after {
+    background-color: $shadowLight;
+    bottom: 0;
+    color: $white;
+    content: $text-for-portrait;
+    display: block;
+    font-family: $livingsocial-stack1;
+    font-size: 60px;
+    left: 0;
+    padding-top: 300px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    z-index: $zindexPortraitWarning;
+  }
+}
+
+// ------------------------------------------------------------------
+//  Desktops
+// ------------------------------------------------------------------
+
+// Small Laptops
+// ------------------------------------------------------------------
+@media screen and (max-width: 1024px) {
+}
+
+// Medium Laptops
+// ------------------------------------------------------------------
+@media only screen and (max-width : 1280px) {
+}
+
+// Mac Laptops
+// ------------------------------------------------------------------
+@media only screen and (max-width : 1680px) {
+  body.with-sidebar2 {
+    header#page-header {
+      div#system-notice {
+        width: 300px;
+        a {
+          width: 250px;
+        } // a
+      } // div#system-notice
+    } // header#page-header
+    div#main aside#page-sidebar2 {
+      display: none;
+      &.is-visible {
+        box-shadow: 0 -1px 10px black;
+        display: block;
+        height: 100%;
+        position: fixed;
+        overflow: scroll;
+        right: 0;
+        z-index: $zindexSlideOut;
+      } // &.is-visible
+    } //div#main aside#page-sidebar2
+    a#show-sidebar2-trigger {
+      display: block;
+      &.is-open {
+        opacity: 1;
+        right: 318px;
+      } // &.is-open
+    } // a#show-sidebar2-trigger
+  } // body
+} // @media only screen and (max-width : 1680px)
+
+// HD - 1080p
+// ------------------------------------------------------------------
+@media only screen and (max-width : 1920px) {
+}
+
+// Apple Monitors
+// ------------------------------------------------------------------
+@media only screen and (min-width : 2300px) {
+}
