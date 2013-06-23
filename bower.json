@@ -1,0 +1,10 @@
+{
+  "name": "keanu",
+  "version": "0.0.1",
+  "main": "keanu.scss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
