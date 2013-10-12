@@ -94,7 +94,7 @@ $desktop-apple-monitor: 2300px;
 
   @if $breakpoint == desktop {
     @media
-      only screen and (min-width : ($tablet-width-min + 1))
+      only screen and (min-width : ($tablet-width-max + 1))
       { @content; }
   }
 
